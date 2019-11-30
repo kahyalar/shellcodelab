@@ -2,13 +2,14 @@
 Dockerfile for Shellcoding lab in Information System Attack and Defence course
 
 ## Installation
-```
-docker pull kahyalar/shellcodelab
-docket run -it --name CONTAINER_NAME kahyalar/shellcodelab
+```powershell
+# Run the docker container
+docket run -it --name --privileged CONTAINER_NAME kahyalar/shellcodelab
+# Disable ASLR in runtime
+echo 0 > /proc/sys/kernel/randomize_va_space
 ```
 ## TO-DO
-- [ ] Fix the bug "-e: command not found"
-- [ ] Disable ASLR for simplying buffer overflow
+- [x] Fix the bug "-e: command not found"
 
 ## Tools
 * gcc
