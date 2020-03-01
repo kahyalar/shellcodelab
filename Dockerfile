@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER Ilker Furkan Kahyalar | @kahyalar
+LABEL maintainer="Ilker Furkan Kahyalar | @kahyalar"
 RUN apt-get update -y && \
     apt-get install -y build-essential locate nano gcc gdb nasm git strace auditd python3
 ADD gethex /root/Documents/gethex
@@ -9,4 +9,5 @@ RUN /bin/bash -c "source ~/.bashrc"
 RUN git clone https://github.com/longld/peda.git ~/peda && \
     echo "source ~/peda/peda.py" >> ~/.gdbinit && \
     echo "DONE! debug your program with gdb and enjoy"
+WORKDIR /root
 CMD ["/bin/bash"]
