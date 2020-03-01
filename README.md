@@ -4,7 +4,7 @@ Dockerfile for Shellcoding lab in Information System Attack and Defence course
 ## Installation
 ```powershell
 # Run the docker container
-docket run -it --name --privileged CONTAINER_NAME kahyalar/shellcodelab
+docker run -it --name --privileged CONTAINER_NAME kahyalar/shellcodelab
 # Disable ASLR in runtime
 echo 0 > /proc/sys/kernel/randomize_va_space
 ```
